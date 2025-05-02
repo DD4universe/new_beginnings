@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Earning Helper App for Students</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f8;
+    margin: 0; padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  header {
+    background-color: #0077cc;
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  main {
+    background: white;
+    width: 95%;
+    max-width: 650px;
+    margin: 1.5rem 0;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+  h1, h2 {
+    color: #0077cc;
+  }
+  ul#jobs-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  label, input, button, textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #005fa3;
+  }
+  .calculator {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+  }
+  #earnings-output {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  footer {
+    margin: 2rem 0 1rem 0;
+    font-size: 0.9rem;
+    color: #777;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Earning Helper App for Engineering Students</h1>
+  <p>Discover & track ways to earn money while studying</p>
+</header>
+
+<main>
+  <section>
+    <h2>Popular Ways to Earn Money</h2>
+    <ul id="jobs-list">
+      <li>Freelance Web Development</li>
+      <li>Online Tutoring (Math, Science, Programming)</li>
+      <li>Paid Internships at Tech Companies</li>
+      <li>Content Creation (YouTube, Blogging)</li>
+      <li>Creating and Selling Online Courses</li>
+      <li>Affiliate Marketing Through Social Channels</li>
+      <li>Mobile App Development</li>
+      <li>Participating in Coding Competitions & Hackathons</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Add Your Own Earning Idea</h2>
+    <label for="new-job">Idea Description:</label>
+    <textarea id="new-job" placeholder="Add your earning idea here..." rows="2"></textarea>
+    <button id="add-job-btn">Add Idea</button>
+  </section>
+
+  <section class="calculator">
+    <h2>Estimate Your Potential Monthly Earnings</h2>
+    <label for="est-income">Enter estimated monthly earnings (₹) per idea:</label>
+    <input type="number" id="est-income" placeholder="E.g., 10000" min="0" />
+    <button id="calc-earnings-btn">Calculate Total Earnings</button>
+    <div id="earnings-output"></div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 Earning Helper App - Created for KSR Engineering Students
+</footer>
+
+<script>
+  const jobsList = document.getElementById('jobs-list');
+  const addJobBtn = document.getElementById('add-job-btn');
+  const newJobInput = document.getElementById('new-job');
+  const estIncomeInput = document.getElementById('est-income');
+  const calcEarningsBtn = document.getElementById('calc-earnings-btn');
+  const earningsOutput = document.getElementById('earnings-output');
+
+  addJobBtn.addEventListener('click', () => {
+    const idea = newJobInput.value.trim();
+    if (idea.length === 0) {
+      alert('Please enter an idea before adding.');
+      return;
+    }
+    const li = document.createElement('li');
+    li.textContent = idea;
+    jobsList.appendChild(li);
+    newJobInput.value = '';
+  });
+
+  calcEarningsBtn.addEventListener('click', () => {
+    const estIncome = parseFloat(estIncomeInput.value);
+    if (isNaN(estIncome) || estIncome < 0) {
+      alert('Please enter a valid non-negative number for estimated income.');
+      return;
+    }
+    const ideasCount = jobsList.children.length;
+    const total = estIncome * ideasCount;
+    earningsOutput.textContent = `Estimated Monthly Earnings: ₹${total.toLocaleString()}`;
+  });
+</script>
+
+</body>
+</html>
