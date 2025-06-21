@@ -1,0 +1,343 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Resume - Durai B with Certificates and Projects
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom scrollbar for skill bars */
+  .skill-bar {
+    height: 6px;
+    border-radius: 3px;
+  }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900 font-serif">
+  <div class="min-h-screen flex flex-col md:flex-row max-w-6xl mx-auto">
+   <!-- Left side content -->
+   <div class="flex-1 p-8 md:p-16">
+    <h1 class="font-extrabold text-3xl mb-6">
+     DURAI B
+    </h1>
+    <div class="space-y-3 mb-10 text-sm text-gray-700">
+     <p class="flex items-center gap-2">
+      <i class="fas fa-location-arrow">
+      </i>
+      13, Middle Street, A. Chitthur, Cuddalore, 606302, TAMIL NADU (IN)
+     </p>
+     <p class="flex items-center gap-2">
+      <i class="fas fa-envelope">
+      </i>
+      itsdurai4@gmail.com
+     </p>
+     <p class="flex items-center gap-2">
+      <i class="fas fa-phone">
+      </i>
+      +91 636970741
+     </p>
+    </div>
+    <section class="mb-8">
+     <h2 class="font-bold text-base mb-2">
+      Professional Summary
+     </h2>
+     <p class="mb-3 leading-relaxed text-sm">
+      Motivated tech enthusiast with hands-on experience in web development
+     </p>
+     <p class="mb-3 leading-relaxed text-sm">
+      basic cloud computing
+     </p>
+     <p class="leading-relaxed text-sm">
+      and project-based learning. Passionate about building real-world solutions and exploring innovative technologies through self-initiated projects.
+     </p>
+    </section>
+    <section class="mb-8">
+     <h2 class="font-bold text-base mb-2">
+      Experience
+     </h2>
+     <div class="mb-4">
+      <p class="font-semibold text-sm">
+       Machine Learning Onramp.
+      </p>
+      <p class="text-xs text-gray-400 italic">
+       January. 2025 - January. 2025
+      </p>
+     </div>
+     <div class="mb-4">
+      <p class="font-semibold text-sm">
+       UX Mega Workshop.
+      </p>
+      <p class="text-xs text-gray-400 italic">
+       December. 2024 - undefined. 2024
+      </p>
+     </div>
+     <div class="mb-4">
+      <p class="font-semibold text-sm">
+       Smoke Detector (Cendrato Kit).
+      </p>
+      <p class="text-xs text-gray-400 italic">
+       December. 2024 - undefined. 2024
+      </p>
+      <ul class="list-disc list-inside text-xs mt-1 text-gray-900">
+       <li>
+        October 2024
+       </li>
+      </ul>
+     </div>
+     <div>
+      <p class="font-semibold text-sm">
+       Responsive Website Design.
+      </p>
+      <p class="text-xs text-gray-400 italic">
+       October. 2024 - October. 2024
+      </p>
+     </div>
+    </section>
+    <section class="mb-8">
+     <h2 class="font-bold text-base mb-2">
+      Education
+     </h2>
+     <div class="mb-4">
+      <p class="font-semibold text-sm">
+       AKT Academy Matric Higher Secondary School, Kallakkurichchi, Tamil Nadu
+      </p>
+      <p class="text-xs text-gray-400 italic">
+       HSLC, 2024
+      </p>
+     </div>
+     <div class="mb-4">
+      <p class="font-semibold text-sm">
+       Government High School, Cuddalore , Tamil Nadu
+      </p>
+      <p class="text-xs text-gray-400 italic">
+       SSLC, 2022
+      </p>
+     </div>
+     <div>
+      <p class="font-semibold text-sm">
+       KSR College of engineering , Thiruchengode , Namakkal
+      </p>
+      <p class="text-xs text-gray-400 italic">
+       B.E, Computer science and engineering (Internet of Things)
+      </p>
+     </div>
+    </section>
+    <section class="mb-8">
+     <h2 class="font-bold text-base mb-2">
+      Hobbies
+     </h2>
+     <ul class="list-disc list-inside text-sm space-y-1">
+      <li>
+       Building Tech Mini Projects
+      </li>
+      <li>
+       Exploring UI/UX Design
+      </li>
+      <li>
+       Watching EdTech &amp; Coding Tutorials
+      </li>
+      <li>
+       Innovation Challenges &amp; Hackathons
+      </li>
+     </ul>
+    </section>
+    <!-- New section: Upload Certificates -->
+    <section class="mb-8">
+     <h2 class="font-bold text-base mb-4">
+      Upload Certificates
+     </h2>
+     <form class="flex flex-col space-y-4" id="certificateForm">
+      <input accept=".pdf,.jpg,.jpeg,.png" class="border border-gray-300 rounded px-3 py-2 text-sm" id="certificateInput" multiple="" type="file"/>
+      <button class="bg-black text-white px-4 py-2 rounded w-max hover:bg-gray-800 transition" type="submit">
+       Upload
+      </button>
+     </form>
+     <div class="mt-4" id="uploadedCertificates">
+      <!-- Uploaded certificates will appear here -->
+     </div>
+    </section>
+    <!-- New section: Projects -->
+    <section>
+     <h2 class="font-bold text-base mb-4">
+      Projects
+     </h2>
+     <form class="flex flex-col space-y-4" id="projectForm">
+      <input class="border border-gray-300 rounded px-3 py-2 text-sm" id="projectTitle" placeholder="Project Title" required="" type="text"/>
+      <textarea class="border border-gray-300 rounded px-3 py-2 text-sm resize-none" id="projectDescription" placeholder="Project Description" required="" rows="3"></textarea>
+      <button class="bg-black text-white px-4 py-2 rounded w-max hover:bg-gray-800 transition" type="submit">
+       Add Project
+      </button>
+     </form>
+     <div class="mt-4 space-y-4" id="projectList">
+      <!-- Added projects will appear here -->
+     </div>
+    </section>
+   </div>
+   <!-- Right side black background -->
+   <aside class="bg-black text-white w-full md:w-80 flex flex-col items-center p-6 md:p-10">
+    <img alt="Portrait photo of a young man wearing a blue shirt on a blue background" class="w-36 h-36 object-cover mb-10" height="150" src="https://storage.googleapis.com/a1aa/image/f10d1907-d1d9-45e3-bb00-79183c6f58c6.jpg" width="150"/>
+    <div class="w-full">
+     <h3 class="font-bold text-lg mb-4">
+      Skills
+     </h3>
+     <div class="mb-4">
+      <p class="text-sm mb-1">
+       Python
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[90%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm font-semibold mb-1">
+       HTML5 ,CSS with Bootstrap
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[60%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       Java
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[70%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       Excel,Power BI, power point,Canva
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[50%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       AWS EC2,S3
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[80%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       MYSQL
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[40%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       Adobe Illustrator
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[30%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       Java
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[60%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       JavaScript
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[70%]">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <p class="text-sm">
+       VDHL
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[50%]">
+       </div>
+      </div>
+     </div>
+     <h3 class="font-bold text-lg mt-8 mb-4">
+      Languages
+     </h3>
+     <div class="mb-4">
+      <p class="text-sm">
+       Tamil
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[90%]">
+       </div>
+      </div>
+     </div>
+     <div>
+      <p class="text-sm">
+       English
+      </p>
+      <div class="bg-gray-700 skill-bar w-full">
+       <div class="bg-gray-300 h-1.5 w-[70%]">
+       </div>
+      </div>
+     </div>
+    </div>
+   </aside>
+  </div>
+  <script>
+   // Handle certificate uploads and display file names
+   const certificateForm = document.getElementById('certificateForm');
+   const certificateInput = document.getElementById('certificateInput');
+   const uploadedCertificates = document.getElementById('uploadedCertificates');
+
+   certificateForm.addEventListener('submit', (e) => {
+     e.preventDefault();
+     const files = certificateInput.files;
+     if (files.length === 0) {
+       alert('Please select at least one certificate file to upload.');
+       return;
+     }
+     for (let i = 0; i < files.length; i++) {
+       const file = files[i];
+       const fileElem = document.createElement('p');
+       fileElem.className = 'text-sm text-gray-700';
+       fileElem.textContent = `Uploaded: ${file.name}`;
+       uploadedCertificates.appendChild(fileElem);
+     }
+     certificateInput.value = '';
+   });
+
+   // Handle adding projects
+   const projectForm = document.getElementById('projectForm');
+   const projectList = document.getElementById('projectList');
+
+   projectForm.addEventListener('submit', (e) => {
+     e.preventDefault();
+     const title = document.getElementById('projectTitle').value.trim();
+     const description = document.getElementById('projectDescription').value.trim();
+     if (!title || !description) {
+       alert('Please fill in both project title and description.');
+       return;
+     }
+     const projectItem = document.createElement('div');
+     projectItem.className = 'border border-gray-300 rounded p-3 bg-gray-50';
+     projectItem.innerHTML = `<p class="font-semibold text-sm mb-1">${title}</p><p class="text-sm">${description}</p>`;
+     projectList.appendChild(projectItem);
+     projectForm.reset();
+   });
+  </script>
+ </body>
+</html>
